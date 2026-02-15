@@ -1,12 +1,11 @@
-# Wedding Invitation App (Teatro-style)
+# Wedding Invitation App (Module 1 - Curtain Hero)
 
-A React + Vite wedding invitation page rebuilt to more closely match the Teatro reference style, including:
+Current focus is only module 1 from the Teatro reference:
 
-- cinematic curtain hero (image + video)
-- reveal date circles
-- countdown cards
-- venue, menu, dress code, gifts, transport sections
-- RSVP form and thank-you close
+- full-screen theatre curtain hero
+- click/tap closed curtain to play opening video
+- once video completes, hero switches to opened curtain image
+- centered invitation typography and top floating controls
 
 ## Run locally
 
@@ -21,5 +20,3 @@ npm run dev
 npm run build
 npm run preview
 ```
-
-> Note: This version uses remote asset URLs from the reference template.
