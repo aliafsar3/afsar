@@ -121,6 +121,56 @@ body {
   padding: 7rem 1rem 4rem;
 }
 
+.hero-content.hidden {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  pointer-events: none;
+}
+
+.hero-content.visible {
+  animation: heroTextReveal 900ms ease-out forwards;
+}
+
+.hero-content.visible .eyebrow {
+  animation: fadeUp 700ms ease-out 120ms both;
+}
+
+.hero-content.visible h1 {
+  animation: fadeUp 850ms ease-out 260ms both;
+}
+
+.hero-content.visible .message {
+  animation: fadeUp 780ms ease-out 420ms both;
+}
+
+.hero-content.visible .scroll,
+.hero-content.visible .arrow {
+  animation: fadeUp 700ms ease-out 560ms both;
+}
+
+@keyframes heroTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .eyebrow,
 .message,
 .scroll {

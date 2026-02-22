@@ -9,6 +9,7 @@ const ASSETS = {
 export default function App() {
   const [isOpening, setIsOpening] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
+  const showHeroContent = isOpened;
 
   const heroClass = useMemo(() => {
     if (isOpening) return 'hero opening';
@@ -61,7 +62,7 @@ export default function App() {
           <button type="button">IT</button>
         </nav>
 
-        <article className="hero-content">
+        <article className={`hero-content ${showHeroContent ? 'visible' : 'hidden'}`}>
           <p className="eyebrow">YOU ARE CORDIALLY INVITED TO CELEBRATE THE WEDDING OF</p>
           <h1>
             Sam
