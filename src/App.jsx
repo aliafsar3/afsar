@@ -9,7 +9,7 @@ const ASSETS = {
 export default function App() {
   const [isOpening, setIsOpening] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
-  const showHeroContent = isOpened;
+  const showHeroContent = isOpening || isOpened;
 
   const heroClass = useMemo(() => {
     if (isOpening) return 'hero opening';
@@ -27,7 +27,7 @@ export default function App() {
       <section className={heroClass} role="button" tabIndex={0} onClick={handleOpenCurtain} onKeyDown={(e) => e.key === 'Enter' && handleOpenCurtain()}>
         <img
           className="hero-image"
-          src={isOpened ? ASSETS.curtainOpen : ASSETS.curtainClosed}
+          src={isOpening || isOpened ? ASSETS.curtainOpen : ASSETS.curtainClosed}
           alt="Theatre curtain"
         />
 

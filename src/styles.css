@@ -123,11 +123,14 @@ body {
 
 .hero-content.hidden {
   opacity: 0;
+  visibility: hidden;
   transform: translateY(30px) scale(0.98);
   pointer-events: none;
 }
 
 .hero-content.visible {
+  opacity: 1;
+  visibility: visible;
   animation: heroTextReveal 900ms ease-out forwards;
 }
 
